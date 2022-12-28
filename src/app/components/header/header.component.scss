@@ -1,0 +1,25 @@
+ion-toolbar {
+  height: 60px;
+}
+
+#icon {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+}
+
+#title {
+  background: #35858B;
+  position: relative;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+#button {
+  background: #35858B;
+  height: 60px;
+}

@@ -1,0 +1,120 @@
+#container{
+  text-align: center;
+
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  color: #282e49;
+  background: #AEFEFF;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  //E6FCFA
+}
+
+ion-item {
+  width: inherit;
+}
+
+@media screen and (min-width: 1501px) {
+  #chart {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1500px) {
+  #container{
+    grid-template-columns: 1fr;
+  }
+
+  #chart {
+    width: 580px;
+    height: 580px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container{
+    grid-template-columns: 1fr;
+    //E6FCFA
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  #chart {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 399px) {
+  #wavesInfo {
+    width: 300px;
+  }
+   .camps {
+     width: 300px;
+   }
+}
+
+@media screen and (min-width: 400px) and (max-width: 480px) {
+  #wavesInfo {
+    width: 300px;
+  }
+  .camps {
+    width: 350px;
+  }
+}
+
+ion-input {
+  margin: 5px;
+}
+
+#information {
+  color: #072227;
+  background: #AEFEFF;
+
+  margin: 0px 40px;
+}
+
+strong{
+  font-size: 60px;
+  font-weight: 500;
+  font-family: 'Abril Fatface', cursive;
+}
+p{
+  margin: 40px;
+  color: #000000;
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
+}
+
+#text {
+  text-align: start;
+}
+
+.camps {
+  padding: 0px 40px;
+}
+
+.buttons {
+  padding: 0px 50px;
+}
+
+#chart {
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 40px;
+}
+
+li {
+  margin: 40px;
+  color: #000000;
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
+}
+
+.paragraph {
+  text-align: start;
+}

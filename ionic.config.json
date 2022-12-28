@@ -1,0 +1,7 @@
+{
+  "name": "wavesGraphs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

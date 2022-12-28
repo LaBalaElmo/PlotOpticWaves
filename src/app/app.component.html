@@ -1,0 +1,37 @@
+<ion-app>
+    <ion-menu side="start" menuId="custom" contentId="main" class="menu-custom" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <div id="toolbar">
+            <div id="icon">
+              <ion-icon src="../../../assets/svgIcons/duck.svg" size="large" routerLink="home"></ion-icon>
+            </div>
+          </div>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item href="home">
+            <ion-icon name="home-outline" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+          <ion-item href="waves">
+            <ion-img src="../assets/icons/angle.png" slot="start"></ion-img>
+            <ion-label>Method for angle of modes</ion-label>
+          </ion-item>
+          <ion-item href="effective-refractive-index-method">
+            <ion-img src="../assets/icons/refraction.png" slot="start"></ion-img>
+            <ion-label>Method for the effective index</ion-label>
+          </ion-item>
+          <ion-item href="general-graphing">
+            <ion-img src="../assets/icons/general.png" slot="start"></ion-img>
+            <ion-label>Plot Functions</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <div id="main-content">
+      <app-header></app-header>
+      <ion-router-outlet id="main"></ion-router-outlet>
+    </div>
+</ion-app>

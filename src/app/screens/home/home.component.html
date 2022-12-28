@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <div id="container" >
+    <div>
+      <h1><strong>Pato</strong></h1>
+    </div>
+    <div>
+      <p>
+        This application was made for the purpose of performing complex calculations, finding the effective index of refraction
+        and the angles for different modes
+        It can also be used to plot multiples functions and find the intersection between those functions.
+      </p>
+    </div>
+    <div id="atajos">
+      <div *ngFor="let cards of infos">
+        <app-option-card [info]="cards"></app-option-card>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,151 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <!--<ion-grid>
+      <ion-row>
+        <ion-col>-->
+    <div id="wavesInfo">
+      <p id="text">
+        Insert the following values:
+      </p>
+      <div class="camps">
+        <ion-item>
+          <ion-label position="floating">Functions to be graphed, eg. x^2+x</ion-label>
+          <ion-input type="text" clearInput placeholder="Functions separated by comma (,)" [(ngModel)]="values.functions" required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">graph limit on x-axis(not necessary)</ion-label>
+          <ion-input type="text" clearInput placeholder="Two numbers separated by comma (,)" [(ngModel)]="values.xLimit"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">graph limit on y-axis(not necessary)</ion-label>
+          <ion-input type="text" clearInput placeholder="Two numbers separated by comma (,)" [(ngModel)]="values.yLimit"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Number of points of each function(not necessary)</ion-label>
+          <ion-input type="number" clearInput placeholder="A numeric value" [(ngModel)]="values.numPoints"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Hexadecimal color code (not necessary)</ion-label>
+          <ion-input type="text" clearInput placeholder="Multiple hexadecimal values separated by comma (,)" [(ngModel)]="values.colors"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="buttons">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button color="tertiary" expand="full" id="calculate" (click)="plot()">Plot</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button color="secondary" expand="full" id="delete" (click)="delete()">Delete</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <div class="camps">
+        <ion-item>
+          <ion-label position="floating">Function position</ion-label>
+          <ion-input type="text" clearInput placeholder="Numeric value of function position" [(ngModel)]="values.intersection"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="buttons">
+        <ion-button color="tertiary" expand="full" id="find" (click)="findIntersections()">Find</ion-button>
+      </div>
+
+
+      <!--<ngx-math-function-plotter [functionInput]="function" maxDisplayValue="10" width="600" height="600">
+      </ngx-math-function-plotter>-->
+      <div id="chart">
+        <canvas id="myChart" height="300px"></canvas>
+      </div>
+
+      <div *ngIf="isCalculated">
+        <p>
+          The intersections found between the functions {{interFunctions}} are:
+        </p>
+        <div *ngFor="let inter of intersection; let i = index">
+          <strong>{{i+1}}.</strong> {{inter}}
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--</ion-col>-->
+
+    <!--<ion-col>-->
+    <div id="information">
+      <div>
+        <h1><strong>Plot Functions</strong></h1>
+      </div>
+      <div class="paragraph">
+        <p>
+          In this page you can plot multiples functions at the same time, only the function field is required and the
+          rest of the fields are just fields to improve how the graphs look.
+        </p>
+        <p>
+          The function field must be filled like the following example:
+        </p>
+        <p>
+          Each function must be separated by a comma (,) and the functions must be functions of x. Then you can just
+          press the plot button or fill the other fields.
+          If you press the button plot, a graph with all the functions will appear like this:
+        </p>
+        <ion-img src="../../assets/images/plot.png"></ion-img>
+        <p>
+          However, you can fill all the other fields that will give to the graph a better look.
+
+          First, the graph limit on x-axis field, by default it goes from -10 to 10, but for most graphs it may be too much.
+          The syntax for this field is two numbers separated by a comma (,). Similarly, the graph limit on y-axis field
+          has the same syntax, but this last field doesn't always work, it only works when the limit function is smaller
+          than the limit given by the previous field. For example:
+        </p>
+        <ion-img src="../../assets/images/axis.png"></ion-img>
+        <p>
+          Which provides the following graph:
+        </p>
+        <ion-img src="../../assets/images/plotAxis.png"></ion-img>
+        <p>
+          The next field is for the number of points for each function, a bigger number of points may take more memory and
+          may take longer. The syntax is just a number which indicates the number of points, by default the number of
+          points is 100.
+        </p>
+        <p>
+          The last field is the hexadecimal color field, in this field you can choose the color that each function will have
+          giving its hexadecimal code, for example:
+        </p>
+        <ion-img src="../../assets/images/color.png"></ion-img>
+        <ion-img src="../../assets/images/plotColor.png"></ion-img>
+        <p>
+          By default, the colors of the functions are random colors.
+        </p>
+      </div>
+
+      <div>
+        <h1><strong>Intersection points</strong></h1>
+      </div>
+      <div class="paragraph">
+        <p>
+          This part only has one field, in this field you must put the functions in relations to its positions in the function fields,
+          For example, the number 1 indicates the first functions, the number 2 indicates the second functions, etc.
+          you can find the intersection for more than two functions, but in this cases it may fail and don't find all the intersections
+          or not even one intersection. The syntax are numbers that indicates the positions of the functions, separated by commas (,):
+        </p>
+        <ion-img src="../../assets/images/inter.png"></ion-img>
+        <ion-img src="../../assets/images/plotInter.png"></ion-img>
+      </div>
+
+
+    </div>
+    <!--</ion-col>
+  </ion-row>
+</ion-grid>-->
+
+  </div>
+</ion-content>

@@ -1,0 +1,33 @@
+ion-card{
+  width: 460px;
+  margin: 20px;
+}
+
+@media all and (min-width: 1px) and (max-width: 440px) {
+  ion-card{
+    width: 350px;
+    margin: 20px;
+  }
+}
+
+@media all and (min-width: 441px) and (max-width: 1000px) {
+  ion-card{
+    width: 400px;
+    margin: 20px;
+  }
+}
+
+#img{
+  height: 377px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+img{
+  position: absolute;
+}
+
+#content{
+  margin-top: 50px;
+}

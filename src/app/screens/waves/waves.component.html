@@ -1,0 +1,109 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <!--<ion-grid>
+      <ion-row>
+        <ion-col>-->
+    <div id="wavesInfo">
+      <p id="text">
+        Insert the following values:
+      </p>
+      <div id="camps">
+        <ion-item>
+          <ion-label position="floating">2a value</ion-label>
+          <ion-input type="number" clearInput placeholder="Value in micrometers" [(ngModel)]="values.a" required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">λ value</ion-label>
+          <ion-input type="number" clearInput placeholder="Value in nanometers" [(ngModel)]="values.lambda" required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">n<sub>1</sub> value</ion-label>
+          <ion-input type="number" clearInput placeholder="numeric value" [(ngModel)]="values.n1" required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">n<sub>2</sub> value</ion-label>
+          <ion-input type="number" clearInput placeholder="numeric value" [(ngModel)]="values.n2" required="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Number of iterations(not necessary)</ion-label>
+          <ion-input type="number" clearInput placeholder="default 200" [(ngModel)]="values.iter"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Number of decimals(not necessary)</ion-label>
+          <ion-input type="number" clearInput placeholder="default 5" [(ngModel)]="values.decimals"></ion-input>
+        </ion-item>
+      </div>
+
+      <div id="buttons">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button color="tertiary" expand="full" id="calculate" (click)="calculate()">Calculate</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button color="secondary" expand="full" id="delete" (click)="delete()">Delete</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <!--<ngx-math-function-plotter [functionInput]="function" maxDisplayValue="10" width="600" height="600">
+      </ngx-math-function-plotter>-->
+      <div id="chart">
+        <canvas id="myChart" height="300px"></canvas>
+      </div>
+
+      <div *ngIf="isCalculated">
+        <p>
+          The number of modes is {{numModes}}, and the critical angle is {{criticAngle}}°.
+        </p>
+        <div *ngFor="let mode of modes; let i = index">
+          <p>
+            The angle for the mode {{i}} is {{mode}}°.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--</ion-col>-->
+
+    <!--<ion-col>-->
+    <div id="information">
+      <div>
+        <h1><strong>Angles of the modes</strong></h1>
+      </div>
+      <div class="paragraph">
+        <p>
+          In this page you can find the angles for different modes, for this 4 fields must be filled, each field is a value
+          that must be known, the first is 2a field, it is the diameter of the core and the value must be in micrometers (µm),
+          the next field is lambda field (λ), it is the wavelength and this value must be in nanometers (nm) and finally
+          the other 2 field are the refractive indices (n1, n2), these are just numeric values.
+        </p>
+        <ion-img src="../../assets/images/wavesData.png"></ion-img>
+        <p>
+          Then, if the delete button is pressed, all the fields will be deleted, instead if the calculate button is pressed,
+          a plot will appear like this:
+        </p>
+        <ion-img src="../../assets/images/wavesPlot.png"></ion-img>
+        <p>
+          Finally, the result, which is each angle with its respective mode are written:
+        </p>
+        <ion-img src="../../assets/images/resultsWaves.png"></ion-img>
+        <p>
+          The last two fields are just for more accurate results, by default the number of iterations is 200 and the number of decimals is 5.
+        </p>
+      </div>
+    </div>
+    <!--</ion-col>
+  </ion-row>
+</ion-grid>-->
+
+  </div>
+</ion-content>
